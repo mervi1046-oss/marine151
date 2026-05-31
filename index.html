@@ -1,0 +1,2211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+<meta name="theme-color" content="#9ccf9a">
+<meta property="og:title" content="东京 6 天 5 晚自由行攻略">
+<meta property="og:description" content="6.11-6.16 香港出发 · 涩谷·浅草·银座·镰仓·富士山">
+<meta property="og:type" content="article">
+<title>东京 6 天 5 晚自由行攻略</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: #f5f1e8;
+    color: #2c2c2c;
+    line-height: 1.7;
+  }
+  .container {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    background: #fffdf7;
+    padding: 0;
+    position: relative;
+  }
+
+  /* 顶部 Header */
+  .header {
+    background: linear-gradient(135deg, #9ccf9a 0%, #5fa373 100%);
+    padding: 50px 40px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: "桜";
+    position: absolute;
+    top: 10px; right: 30px;
+    font-size: 80px;
+    color: rgba(255,255,255,0.15);
+    font-family: serif;
+  }
+  .header::after {
+    content: "東京";
+    position: absolute;
+    bottom: 10px; left: 30px;
+    font-size: 60px;
+    color: rgba(255,255,255,0.15);
+    font-family: serif;
+    letter-spacing: 4px;
+  }
+  .header .tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.25);
+    color: #fff;
+    padding: 5px 18px;
+    border-radius: 20px;
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    backdrop-filter: blur(4px);
+  }
+  .header h1 {
+    color: #fff;
+    font-size: 38px;
+    letter-spacing: 4px;
+    margin-bottom: 12px;
+    font-weight: 600;
+  }
+  .header .subtitle {
+    color: rgba(255,255,255,0.95);
+    font-size: 15px;
+    letter-spacing: 3px;
+  }
+  .header .date-info {
+    margin-top: 22px;
+    display: inline-flex;
+    gap: 30px;
+    background: rgba(255,255,255,0.18);
+    padding: 12px 28px;
+    border-radius: 30px;
+  }
+  .header .date-info span {
+    color: #fff;
+    font-size: 13px;
+  }
+  .header .date-info strong {
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    margin-top: 2px;
+  }
+
+  /* 概览 Section */
+  .overview {
+    padding: 35px 40px;
+    background: #fffdf7;
+  }
+  .overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .overview-card {
+    background: linear-gradient(135deg, #f8c8d1 0%, #fce5ea 100%);
+    padding: 18px 20px;
+    border-radius: 14px;
+    border-left: 4px solid #e89aa8;
+  }
+  .overview-card:nth-child(2n) {
+    background: linear-gradient(135deg, #d9eed8 0%, #eaf5e9 100%);
+    border-left-color: #5fa373;
+  }
+  .overview-card .label {
+    font-size: 12px;
+    color: #888;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+  }
+  .overview-card .value {
+    font-size: 16px;
+    color: #2c2c2c;
+    font-weight: 600;
+  }
+
+  /* 区块通用标题 */
+  .section {
+    padding: 40px 40px 20px;
+  }
+  .section-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    position: relative;
+  }
+  .section-title .num {
+    font-size: 13px;
+    color: #5fa373;
+    letter-spacing: 4px;
+    font-weight: 600;
+    margin-right: 14px;
+    padding: 4px 12px;
+    border: 1px solid #9ccf9a;
+    border-radius: 4px;
+  }
+  .section-title h2 {
+    font-size: 22px;
+    color: #2c2c2c;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  .section-title .deco {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, #9ccf9a, transparent);
+    margin-left: 16px;
+  }
+
+  /* 交通指南 */
+  .traffic-box {
+    background: #fff;
+    border: 1px solid #f0ead8;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+  }
+  .traffic-head {
+    background: linear-gradient(90deg, #fff5e6 0%, #fffdf7 100%);
+    padding: 14px 22px;
+    border-bottom: 1px dashed #e8d8b8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .traffic-head .name {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c2c2c;
+  }
+  .traffic-head .price {
+    color: #e89aa8;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .traffic-body {
+    padding: 16px 22px;
+    font-size: 14px;
+    color: #555;
+  }
+  .traffic-body p { margin-bottom: 6px; }
+  .traffic-body .hint {
+    background: #fff8e1;
+    color: #8a6d3b;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    margin-top: 8px;
+  }
+  .recommended {
+    display: inline-block;
+    background: #5fa373;
+    color: #fff;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-left: 8px;
+    letter-spacing: 1px;
+  }
+
+  /* 酒店推荐 */
+  .hotel-card {
+    background: linear-gradient(135deg, #fffdf7 0%, #fff5e6 100%);
+    border: 1px solid #f0ead8;
+    border-radius: 14px;
+    padding: 22px 24px;
+    margin-bottom: 12px;
+  }
+  .hotel-card h3 {
+    font-size: 17px;
+    color: #5fa373;
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .hotel-card .area {
+    display: inline-block;
+    background: #9ccf9a;
+    color: #fff;
+    font-size: 11px;
+    padding: 2px 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  .hotel-card p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.8;
+  }
+  .hotel-card .price-tag {
+    margin-top: 10px;
+    color: #e89aa8;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .hotel-list {
+    margin-top: 10px;
+    padding-left: 0;
+    list-style: none;
+  }
+  .hotel-list li {
+    padding: 6px 0;
+    border-bottom: 1px dashed #f0ead8;
+    font-size: 13px;
+    color: #666;
+    display: flex;
+    justify-content: space-between;
+  }
+  .hotel-list li:last-child { border-bottom: 0; }
+  .hotel-list li span:last-child { color: #e89aa8; font-weight: 600; }
+
+  /* Day 卡片 */
+  /* 天气条 */
+  .weather-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 24px;
+    background: linear-gradient(90deg, #fff8e1 0%, #fffdf7 100%);
+    border-bottom: 1px dashed #f0ead8;
+    font-size: 13px;
+    color: #5a5a5a;
+    flex-wrap: wrap;
+  }
+  .weather-bar .icon { font-size: 22px; }
+  .weather-bar .item { display: flex; align-items: center; gap: 4px; }
+  .weather-bar .label {
+    color: #999;
+    font-size: 12px;
+  }
+  .weather-bar .val {
+    color: #2c2c2c;
+    font-weight: 600;
+  }
+  .weather-bar .tag {
+    background: #f0ead8;
+    color: #8a6d3b;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: auto;
+  }
+  .weather-bar .tip {
+    flex-basis: 100%;
+    margin-top: 4px;
+    padding: 6px 10px;
+    background: rgba(232, 154, 168, 0.08);
+    border-left: 3px solid #e89aa8;
+    border-radius: 4px;
+    color: #8a4a55;
+    font-size: 12px;
+    line-height: 1.6;
+  }
+
+  .day-card {
+    margin-bottom: 22px;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(95,163,115,0.06);
+    border: 1px solid #f0ead8;
+  }
+  .day-head {
+    background: linear-gradient(135deg, #9ccf9a 0%, #5fa373 100%);
+    color: #fff;
+    padding: 18px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .day-head.pink {
+    background: linear-gradient(135deg, #f8c8d1 0%, #e89aa8 100%);
+  }
+  .day-head .day-num {
+    font-size: 13px;
+    letter-spacing: 3px;
+    opacity: 0.9;
+  }
+  .day-head .day-num strong {
+    display: block;
+    font-size: 26px;
+    letter-spacing: 2px;
+    margin-top: 4px;
+    font-weight: 700;
+  }
+  .day-head .day-theme {
+    text-align: right;
+  }
+  .day-head .day-theme .date {
+    font-size: 13px;
+    opacity: 0.9;
+  }
+  .day-head .day-theme .theme {
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 4px;
+    letter-spacing: 1px;
+  }
+
+  .day-body { padding: 22px 24px; }
+  .timeline-item {
+    display: flex;
+    margin-bottom: 18px;
+    position: relative;
+  }
+  .timeline-item:last-child { margin-bottom: 0; }
+  .timeline-time {
+    flex-shrink: 0;
+    width: 70px;
+    color: #5fa373;
+    font-weight: 600;
+    font-size: 14px;
+    padding-top: 2px;
+  }
+  .timeline-dot {
+    flex-shrink: 0;
+    width: 14px;
+    margin-right: 14px;
+    position: relative;
+  }
+  .timeline-dot::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #5fa373;
+    border-radius: 50%;
+    position: absolute;
+    top: 7px;
+    left: 0;
+    box-shadow: 0 0 0 3px rgba(95,163,115,0.2);
+  }
+  .timeline-dot::after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 20px;
+    bottom: -18px;
+    width: 2px;
+    background: #d9eed8;
+  }
+  .timeline-item:last-child .timeline-dot::after { display: none; }
+  .timeline-content {
+    flex: 1;
+  }
+  .timeline-content .title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin-bottom: 4px;
+  }
+  .timeline-content .desc {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.7;
+  }
+  .timeline-content .cost {
+    display: inline-block;
+    margin-top: 6px;
+    background: #fff5e6;
+    color: #c97d4e;
+    font-size: 12px;
+    padding: 2px 10px;
+    border-radius: 10px;
+  }
+  .day-summary {
+    margin-top: 18px;
+    padding: 12px 16px;
+    background: linear-gradient(90deg, #fff5e6 0%, #fffdf7 100%);
+    border-radius: 8px;
+    font-size: 13px;
+    color: #8a6d3b;
+    display: flex;
+    justify-content: space-between;
+  }
+  .day-summary strong { color: #e89aa8; }
+
+  /* 预算总表 */
+  .budget-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(95,163,115,0.06);
+  }
+  .budget-table thead {
+    background: linear-gradient(90deg, #5fa373 0%, #9ccf9a 100%);
+  }
+  .budget-table th {
+    color: #fff;
+    padding: 14px 12px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: left;
+  }
+  .budget-table th:nth-child(n+3) { text-align: right; }
+  .budget-table td {
+    padding: 14px 12px;
+    font-size: 14px;
+    color: #2c2c2c;
+    border-bottom: 1px dashed #f0ead8;
+  }
+  .budget-table td:nth-child(n+3) { text-align: right; }
+  .budget-table tr:last-child td { border-bottom: 0; }
+  .budget-table .total-row {
+    background: linear-gradient(90deg, #fff5e6 0%, #ffeed9 100%);
+    font-weight: 600;
+  }
+  .budget-table .total-row td {
+    color: #e89aa8;
+    font-size: 15px;
+    padding: 16px 12px;
+  }
+  .budget-table .cat {
+    color: #5fa373;
+    font-weight: 600;
+  }
+
+  /* Tips 区块 */
+  /* 票券 Checklist */
+  .ticket-section {
+    padding: 30px 40px 10px;
+    background: #fffdf7;
+  }
+  .checklist-group {
+    background: #fff;
+    border: 1px solid #f0ead8;
+    border-radius: 14px;
+    margin-bottom: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(95,163,115,0.05);
+  }
+  .checklist-group-head {
+    padding: 14px 20px;
+    background: linear-gradient(90deg, #fce5ea 0%, #fffdf7 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed #f0ead8;
+  }
+  .checklist-group-head.green {
+    background: linear-gradient(90deg, #d9eed8 0%, #fffdf7 100%);
+  }
+  .checklist-group-head.beige {
+    background: linear-gradient(90deg, #fff5e6 0%, #fffdf7 100%);
+  }
+  .checklist-group-head.coffee {
+    background: linear-gradient(90deg, #f0e4d4 0%, #fffdf7 100%);
+  }
+  .checklist-group-head h3 {
+    font-size: 16px;
+    color: #2c2c2c;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .checklist-group-head .count {
+    font-size: 12px;
+    color: #888;
+    background: rgba(255,255,255,0.7);
+    padding: 3px 10px;
+    border-radius: 10px;
+  }
+
+  .check-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 14px 20px;
+    border-bottom: 1px dashed #f5efe2;
+    cursor: pointer;
+    transition: background 0.2s;
+    user-select: none;
+  }
+  .check-item:last-child { border-bottom: 0; }
+  .check-item:hover { background: #fffaf0; }
+
+  .check-item input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #c9bfa3;
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+    margin-right: 14px;
+    margin-top: 2px;
+    flex-shrink: 0;
+    position: relative;
+    transition: all 0.2s;
+  }
+  .check-item input[type="checkbox"]:hover {
+    border-color: #5fa373;
+  }
+  .check-item input[type="checkbox"]:checked {
+    background: #5fa373;
+    border-color: #5fa373;
+  }
+  .check-item input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 6px;
+    height: 11px;
+    border: solid #fff;
+    border-width: 0 2.5px 2.5px 0;
+    transform: rotate(45deg);
+  }
+  .check-item input[type="checkbox"]:checked + .check-content .check-title {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+  .check-item input[type="checkbox"]:checked + .check-content .check-desc {
+    color: #bbb;
+  }
+  .check-item input[type="checkbox"]:checked + .check-content .check-price {
+    color: #bbb;
+  }
+
+  .check-content {
+    flex: 1;
+  }
+  .check-content .check-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  .check-content .check-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2c2c2c;
+    transition: all 0.2s;
+  }
+  .check-content .check-price {
+    font-size: 13px;
+    color: #e89aa8;
+    font-weight: 600;
+    flex-shrink: 0;
+    margin-left: 10px;
+  }
+  .check-content .check-desc {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.7;
+    transition: color 0.2s;
+  }
+  .check-content .check-desc .channel {
+    display: inline-block;
+    background: #fff5e6;
+    color: #8a6d3b;
+    padding: 1px 7px;
+    border-radius: 4px;
+    margin-right: 5px;
+    font-size: 12px;
+  }
+
+  .progress-bar {
+    background: linear-gradient(135deg, #fffdf7 0%, #fff5e6 100%);
+    border: 1px solid #f0ead8;
+    border-radius: 12px;
+    padding: 14px 20px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .progress-bar .label {
+    font-size: 13px;
+    color: #5fa373;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .progress-bar .bar {
+    flex: 1;
+    height: 10px;
+    background: #f0ead8;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .progress-bar .fill {
+    height: 100%;
+    background: linear-gradient(90deg, #9ccf9a 0%, #5fa373 100%);
+    width: 0%;
+    transition: width 0.3s;
+    border-radius: 5px;
+  }
+  .progress-bar .num {
+    font-size: 14px;
+    color: #5fa373;
+    font-weight: 700;
+    flex-shrink: 0;
+    min-width: 50px;
+    text-align: right;
+  }
+
+  /* 打卡点 · 小红书链接卡片 */
+  .timeline-content .photo-row {
+    margin-top: 8px;
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+  .xhs-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 12px 5px 8px;
+    background: linear-gradient(135deg, #fce5ea 0%, #f8c8d1 100%);
+    border-radius: 20px;
+    text-decoration: none;
+    color: #c2185b;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid rgba(232, 154, 168, 0.3);
+    transition: all 0.2s;
+    cursor: pointer;
+    white-space: nowrap;
+    user-select: none;
+  }
+  .xhs-link:hover {
+    background: linear-gradient(135deg, #f8c8d1 0%, #e89aa8 100%);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(232, 154, 168, 0.4);
+  }
+  .xhs-link:hover .xhs-icon {
+    background: #fff;
+    color: #e89aa8;
+  }
+  .xhs-link .xhs-icon {
+    width: 18px;
+    height: 18px;
+    background: #fe2c55;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    flex-shrink: 0;
+    transition: all 0.2s;
+    font-family: serif;
+  }
+  .xhs-link .arrow {
+    font-size: 10px;
+    opacity: 0.6;
+  }
+
+  .tips-section {
+    padding: 30px 40px 50px;
+    background: linear-gradient(180deg, #fffdf7 0%, #fff5e6 100%);
+  }
+  .tip-card {
+    background: #fff;
+    border-left: 4px solid #f8c8d1;
+    padding: 16px 20px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #555;
+    line-height: 1.8;
+  }
+  .tip-card strong { color: #e89aa8; }
+  .tip-card:nth-child(2n) { border-left-color: #9ccf9a; }
+  .tip-card:nth-child(2n) strong { color: #5fa373; }
+
+  /* 页脚 */
+  .footer {
+    background: linear-gradient(135deg, #5fa373 0%, #9ccf9a 100%);
+    color: #fff;
+    text-align: center;
+    padding: 30px 40px;
+  }
+  .footer .quote {
+    font-size: 14px;
+    letter-spacing: 2px;
+    opacity: 0.95;
+    margin-bottom: 8px;
+  }
+  .footer .sig {
+    font-size: 12px;
+    opacity: 0.7;
+    letter-spacing: 3px;
+  }
+
+  /* ============================================ */
+  /* 移动端响应式适配 (≤ 600px) */
+  /* ============================================ */
+  @media (max-width: 600px) {
+    body { font-size: 15px; }
+
+    /* Header 缩小 */
+    .header { padding: 36px 24px 28px; }
+    .header h1 { font-size: 30px; letter-spacing: 3px; }
+    .header .subtitle { font-size: 13px; letter-spacing: 2px; }
+    .header .date-info {
+      gap: 16px;
+      padding: 10px 18px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .header .date-info span { font-size: 12px; }
+    .header .date-info strong { font-size: 15px; }
+    .header::before { font-size: 60px; right: 15px; }
+    .header::after { font-size: 44px; left: 15px; letter-spacing: 2px; }
+
+    /* 概览卡片单列 */
+    .overview { padding: 22px 18px; }
+    .overview-grid { grid-template-columns: 1fr; gap: 10px; }
+    .overview-card { padding: 14px 16px; }
+    .overview-card .value { font-size: 14px; }
+
+    /* 通用区块缩小 padding */
+    .section { padding: 28px 18px 14px; }
+    .section-title h2 { font-size: 18px; letter-spacing: 1px; }
+    .section-title .num { font-size: 11px; padding: 3px 9px; margin-right: 10px; }
+
+    /* 交通卡片 */
+    .traffic-head { padding: 12px 16px; flex-wrap: wrap; gap: 6px; }
+    .traffic-head .name { font-size: 14px; }
+    .traffic-head .price { font-size: 13px; }
+    .traffic-body { padding: 14px 16px; font-size: 13px; }
+
+    /* 酒店卡片 */
+    .hotel-card { padding: 18px 18px; }
+    .hotel-card h3 { font-size: 15px; }
+    .hotel-card p { font-size: 13px; }
+    .hotel-list li { font-size: 12px; }
+
+    /* Day 卡片 */
+    .day-head { padding: 14px 18px; flex-wrap: wrap; gap: 8px; }
+    .day-head .day-num strong { font-size: 22px; }
+    .day-head .day-theme .theme { font-size: 14px; }
+    .day-head .day-theme .date { font-size: 12px; }
+    .day-body { padding: 18px 16px; }
+
+    /* 天气条 */
+    .weather-bar {
+      padding: 10px 18px;
+      gap: 8px;
+      font-size: 12px;
+    }
+    .weather-bar .icon { font-size: 18px; }
+    .weather-bar .label { font-size: 11px; }
+    .weather-bar .tag { font-size: 10px; padding: 2px 6px; }
+    .weather-bar .tip { font-size: 12px; padding: 6px 10px; }
+
+    /* Timeline */
+    .timeline-item { margin-bottom: 14px; }
+    .timeline-time { width: 52px; font-size: 13px; }
+    .timeline-dot { margin-right: 10px; }
+    .timeline-content .title { font-size: 14px; }
+    .timeline-content .desc { font-size: 12px; }
+    .timeline-content .cost { font-size: 11px; padding: 2px 8px; }
+    .day-summary {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      font-size: 12px;
+    }
+
+    /* 小红书链接卡片 */
+    .xhs-link { padding: 4px 10px 4px 6px; font-size: 11px; }
+    .xhs-link .xhs-icon { width: 16px; height: 16px; font-size: 10px; }
+
+    /* 预算表 */
+    .budget-table th, .budget-table td {
+      padding: 10px 8px;
+      font-size: 12px;
+    }
+    .budget-table .total-row td { font-size: 13px; padding: 12px 8px; }
+
+    /* Checklist */
+    .ticket-section { padding: 22px 18px 8px; }
+    .checklist-group-head { padding: 12px 16px; flex-wrap: wrap; gap: 6px; }
+    .checklist-group-head h3 { font-size: 14px; }
+    .checklist-group-head .count { font-size: 11px; padding: 2px 8px; }
+    .check-item { padding: 12px 16px; }
+    .check-item input[type="checkbox"] { width: 20px; height: 20px; margin-right: 12px; }
+    .check-content .check-title { font-size: 14px; }
+    .check-content .check-price { font-size: 12px; }
+    .check-content .check-desc { font-size: 12px; }
+    .progress-bar {
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 12px 16px;
+      margin-bottom: 14px;
+    }
+    .progress-bar .label { font-size: 12px; flex-basis: 100%; }
+    .progress-bar .num { font-size: 13px; }
+
+    /* Tips */
+    .tips-section { padding: 24px 18px 36px; }
+    .tip-card { padding: 14px 16px; font-size: 13px; }
+
+    /* 页脚 */
+    .footer { padding: 24px 18px; }
+    .footer .quote { font-size: 13px; letter-spacing: 1px; }
+  }
+
+  /* 超小屏（< 380px，老款 iPhone SE 等） */
+  @media (max-width: 380px) {
+    body { font-size: 14px; }
+    .header h1 { font-size: 26px; }
+    .day-head { padding: 12px 14px; }
+    .timeline-time { width: 46px; font-size: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="tag">T O K Y O · J A P A N</div>
+    <h1>东京六日游</h1>
+    <div class="subtitle">六天五晚 · 自由行私享攻略</div>
+    <div class="date-info">
+      <span>出发<strong>6.11 周三</strong></span>
+      <span>返程<strong>6.16 周一</strong></span>
+      <span>汇率<strong>1 RMB ≈ 23 JPY</strong></span>
+    </div>
+  </div>
+
+  <!-- 概览 -->
+  <div class="overview">
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="label">出发地 / 抵达</div>
+        <div class="value">香港 → 成田 NRT</div>
+      </div>
+      <div class="overview-card">
+        <div class="label">行程节奏</div>
+        <div class="value">轻松型 · 不挪酒店</div>
+      </div>
+      <div class="overview-card">
+        <div class="label">住宿区域</div>
+        <div class="value">上野 / 浅草 5 晚</div>
+      </div>
+      <div class="overview-card">
+        <div class="label">核心目的地</div>
+        <div class="value">涩谷·浅草·银座·镰仓·富士山</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 一、抵达交通 -->
+  <div class="section">
+    <div class="section-title">
+      <span class="num">壹</span>
+      <h2>抵达交通 · NRT 到市区</h2>
+      <span class="deco"></span>
+    </div>
+    <div style="background: linear-gradient(135deg, #fff5e6 0%, #fce5ea 100%); border-left: 4px solid #e89aa8; padding: 12px 16px; border-radius: 8px; margin-bottom: 18px; font-size: 13px; color: #5a4040; line-height: 1.7;">
+      💡 <strong>关于打卡参考图：</strong>每个景点旁边有 <span style="color:#e89aa8;font-weight:600;">📕 小红书</span> 粉色按钮，点击直接跳转到小红书的相关搜索页，看真人博主拍摄的最新爆款照片。
+    </div>
+
+    <div class="traffic-box">
+      <div class="traffic-head">
+        <div class="name">京成 Skyliner（特急列车）<span class="recommended">推荐</span></div>
+        <div class="price">¥2,580（约 ¥112 RMB）</div>
+      </div>
+      <div class="traffic-body">
+        <p>📍 成田机场 T1/T2 → 日暮里站，仅 <strong>41 分钟</strong>，全程对号入座，行李轻松</p>
+        <p>📍 日暮里站换乘 JR 山手线 1 站到上野，再走/坐 1 站到浅草</p>
+        <p>🎫 建议机场柜台买<strong>「Skyliner 单程 + 东京地铁 72 小时券」</strong>套票，¥4,880（约 ¥212 RMB），下面 D2-D5 地铁基本免费</p>
+        <div class="hint">💡 落地 14:00 出关排队约 40-60 分钟，预计 15:30 上车，16:30 到酒店刚好</div>
+      </div>
+    </div>
+
+    <div class="traffic-box">
+      <div class="traffic-head">
+        <div class="name">利木津巴士（备选）</div>
+        <div class="price">¥3,600（约 ¥157 RMB）</div>
+      </div>
+      <div class="traffic-body">
+        <p>📍 直达酒店门口，行李多/同行有老人小孩首选，1.5-2 小时</p>
+        <p>📍 雨天/堵车不推荐，时间不可控</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 二、住宿建议 -->
+  <div class="section">
+    <div class="section-title">
+      <span class="num">贰</span>
+      <h2>住宿建议 · 一店住到底</h2>
+      <span class="deco"></span>
+    </div>
+
+    <div class="hotel-card">
+      <div class="area">推荐区域</div>
+      <h3>上野 / 浅草 一带（5 晚不挪窝）</h3>
+      <p>
+        ① <strong>京成 Skyliner 直达成田</strong>，回程 9:30 飞机 6:30 出门完全来得及<br>
+        ② JR 山手线 + 银座线 + 都营浅草线三线交汇，去涩谷/银座/东京塔都直达<br>
+        ③ 房价比新宿/涩谷便宜 30%，周边居酒屋/药妆店密集<br>
+        ④ 浅草寺、上野公园、阿美横丁步行可达，早晚悠闲逛
+      </p>
+      <div class="price-tag">参考房价 ¥9,000-13,000 / 晚（约 ¥391-565 RMB）</div>
+      <ul class="hotel-list">
+        <li><span>东京里士满酒店 上野</span><span>¥11,000 / 晚（约 ¥478 RMB）</span></li>
+        <li><span>浅草微笑酒店 Premium</span><span>¥10,500 / 晚（约 ¥457 RMB）</span></li>
+        <li><span>御徒町 APA 酒店</span><span>¥9,500 / 晚（约 ¥413 RMB）</span></li>
+        <li><span>上野多美迎酒店（含温泉）</span><span>¥12,800 / 晚（约 ¥557 RMB）</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 三、每日行程 -->
+  <div class="section">
+    <div class="section-title">
+      <span class="num">叁</span>
+      <h2>每日行程 · 六天五晚</h2>
+      <span class="deco"></span>
+    </div>
+
+    <!-- Day 1 -->
+    <div class="day-card">
+      <div class="day-head">
+        <div class="day-num">DAY<strong>01</strong></div>
+        <div class="day-theme">
+          <div class="date">6.11 周三</div>
+          <div class="theme">抵达东京 · 浅草夜游</div>
+        </div>
+      </div>
+      <div class="weather-bar">
+        <span class="icon">🌥️</span>
+        <span class="item"><span class="label">白天</span><span class="val">多云转阵雨</span></span>
+        <span class="item"><span class="label">气温</span><span class="val">21-27℃</span></span>
+        <span class="item"><span class="label">降水</span><span class="val">40%</span></span>
+        <span class="tag">气候预估</span>
+        <div class="tip">⚠️ 落地当天可能有阵雨，行李箱里放好折叠伞。傍晚浅草寺石板路湿滑，注意防滑鞋。</div>
+      </div>
+      <div class="day-body">
+        <div class="timeline-item">
+          <div class="timeline-time">14:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">成田机场入境 + 取行李</div>
+            <div class="desc">入境卡提前在飞机上填好，行李大约 30 分钟可取</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">15:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">机场柜台买 Skyliner + 地铁 72h 套票</div>
+            <div class="desc">套票 ¥4,880，含单程 Skyliner + 接下来 3 天地铁随便坐</div>
+            <div class="cost">¥4,880（约 ¥212 RMB）</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">16:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">日暮里 → 酒店 Check-in</div>
+            <div class="desc">放下行李换轻装，准备出门</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">18:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">浅草寺 + 仲见世商店街</div>
+            <div class="desc">傍晚的雷门人少光线美，仲见世吃人形烧、抹茶冰、买点小礼物</div>
+            <div class="cost">小吃 ¥1,500（约 ¥65 RMB）</div>
+            <div class="photo-row">
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E6%B5%85%E8%8D%89%E5%AF%BA%20%E9%9B%B7%E9%97%A8" target="_blank" rel="noopener"><span class="xhs-icon">书</span>浅草寺·雷门<span class="arrow">↗</span></a>
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E4%BB%B2%E8%A7%81%E4%B8%96%E5%95%86%E5%BA%97%E8%A1%97" target="_blank" rel="noopener"><span class="xhs-icon">书</span>仲见世商店街<span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">19:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">隅田川 + 晴空塔夜景</div>
+            <div class="desc">从浅草寺走到吾妻桥，对岸是晴空塔+朝日啤酒大楼夜景，拍照神位</div>
+            <div class="photo-row">
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E6%B5%85%E8%8D%89%20%E6%99%B4%E7%A9%BA%E5%A1%94%20%E5%A4%9C%E6%99%AF" target="_blank" rel="noopener"><span class="xhs-icon">书</span>晴空塔夜景<span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">20:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">居酒屋晚餐 · 浅草 Hoppy 街</div>
+            <div class="desc">推荐「鈴芳」、「捕鯨舩」当地老店，烤鳗鱼/串烧</div>
+            <div class="cost">¥3,500（约 ¥152 RMB）</div>
+          </div>
+        </div>
+        <div class="day-summary">
+          <span>🌸 当日节奏：抵达 + 轻量游</span>
+          <span>当日花费 <strong>约 ¥9,880（≈¥430 RMB）</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day-card">
+      <div class="day-head pink">
+        <div class="day-num">DAY<strong>02</strong></div>
+        <div class="day-theme">
+          <div class="date">6.12 周四</div>
+          <div class="theme">原宿 · 表参道 · 根津美术馆 · 涩谷</div>
+        </div>
+      </div>
+      <div class="weather-bar">
+        <span class="icon">⛅</span>
+        <span class="item"><span class="label">白天</span><span class="val">多云时晴</span></span>
+        <span class="item"><span class="label">气温</span><span class="val">19-26℃</span></span>
+        <span class="item"><span class="label">降水</span><span class="val">25%</span></span>
+        <span class="tag">气候预估</span>
+        <div class="tip">☀️ 拍照天，根津美术馆庭院光线最佳。傍晚 SHIBUYA SKY 露天观景，建议带件薄外套（顶层风大体感凉 3-4℃）。</div>
+      </div>
+      <div class="day-body">
+        <div class="timeline-item">
+          <div class="timeline-time">10:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">竹下通 + 原宿购物街</div>
+            <div class="desc">JR 原宿站下，少女风彩虹芝士、可爱杂货店，买买买</div>
+            <div class="cost">购物 ¥3,000（约 ¥130 RMB）</div>
+            <div class="photo-row">
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E7%AB%B9%E4%B8%8B%E9%80%9A%20%E5%8E%9F%E5%AE%BF" target="_blank" rel="noopener"><span class="xhs-icon">书</span>竹下通<span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">11:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">表参道 · 青山街区漫步</div>
+            <div class="desc">高端品牌+建筑控天堂，路过 PRADA 青山店、Dior 旗舰店</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">12:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">午餐 · 表参道一带</div>
+            <div class="desc">推荐「茶寮 都路里」抹茶定食 / 「Maisen 迈泉」炸猪排，避开正午高峰</div>
+            <div class="cost">¥1,800（约 ¥78 RMB）</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">14:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">★ 根津美术馆（重点）</div>
+            <div class="desc">表参道站步行 8 分钟，南青山闹中取静。日本古美术 + 隈研吾设计建筑 + 超美日式庭院，6 月紫阳花季正盛，停留约 1.5 小时</div>
+            <div class="cost">¥1,500（约 ¥65 RMB）</div>
+            <div class="photo-row">
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E6%A0%B9%E6%B4%A5%E7%BE%8E%E6%9C%AF%E9%A6%86%20%E5%BA%AD%E9%99%A2" target="_blank" rel="noopener"><span class="xhs-icon">书</span>根津美术馆庭院<span class="arrow">↗</span></a>
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E6%A0%B9%E6%B4%A5%E7%BE%8E%E6%9C%AF%E9%A6%86%20%E9%9A%88%E7%A0%94%E5%90%BE" target="_blank" rel="noopener"><span class="xhs-icon">书</span>根津美术馆建筑<span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">15:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">表参道咖啡 · BLUE BOTTLE / % Arabica</div>
+            <div class="desc">出馆后回表参道喝咖啡歇脚，出片机位</div>
+            <div class="cost">¥800（约 ¥35 RMB）</div>
+            <div class="photo-row">
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%25Arabica%20%E8%A1%A8%E5%8F%82%E9%81%93" target="_blank" rel="noopener"><span class="xhs-icon">书</span>%Arabica 表参道<span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">16:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">表参道 → 涩谷（步行 15 分钟 或 JR 1 站）</div>
+            <div class="desc">沿青山通往涩谷走，路过涩谷 Hikarie 商场</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">17:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">涩谷 SHIBUYA SKY 展望台</div>
+            <div class="desc">229 米高顶层露天，预约 17:30 场次看日落转夜景，全东京最美机位（必提前网上预约）</div>
+            <div class="cost">¥2,500（约 ¥109 RMB）</div>
+            <div class="photo-row">
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=SHIBUYA%20SKY%20%E6%97%A5%E8%90%BD" target="_blank" rel="noopener"><span class="xhs-icon">书</span>SKY 日落<span class="arrow">↗</span></a>
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=SHIBUYA%20SKY%20%E5%A4%9C%E6%99%AF" target="_blank" rel="noopener"><span class="xhs-icon">书</span>SKY 夜景<span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">19:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">涩谷十字路口 + 八公犬像</div>
+            <div class="desc">站街角看人潮，电影既视感，二楼星巴克俯拍最佳</div>
+            <div class="photo-row">
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E6%B6%A9%E8%B0%B7%E5%8D%81%E5%AD%97%E8%B7%AF%E5%8F%A3" target="_blank" rel="noopener"><span class="xhs-icon">书</span>涩谷十字路口<span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">19:45</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">晚餐 · 烧肉 / 寿司</div>
+            <div class="desc">推荐「肉之大山」涩谷店，性价比高</div>
+            <div class="cost">¥4,000（约 ¥174 RMB）</div>
+          </div>
+        </div>
+        <div class="day-summary">
+          <span>💗 当日节奏：购物 + 美术馆 + 日落夜景</span>
+          <span>当日花费 <strong>约 ¥13,600（≈¥591 RMB）</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day-card">
+      <div class="day-head">
+        <div class="day-num">DAY<strong>03</strong></div>
+        <div class="day-theme">
+          <div class="date">6.13 周五</div>
+          <div class="theme">富士山 · 河口湖一日游</div>
+        </div>
+      </div>
+      <div class="weather-bar">
+        <span class="icon">🌦️</span>
+        <span class="item"><span class="label">白天</span><span class="val">阵雨/多云</span></span>
+        <span class="item"><span class="label">山区气温</span><span class="val">14-22℃</span></span>
+        <span class="item"><span class="label">降水</span><span class="val">45%</span></span>
+        <span class="tag">气候预估</span>
+        <div class="tip">🗻 全程关键日！河口湖海拔 833m，比东京低 5-8℃，必带长袖外套。**6 月看到富士山概率约 50-60%**，如果当天预报雨，团费可问淘宝是否能改期。带晕车药（山路弯）。</div>
+      </div>
+      <div class="day-body">
+        <div class="timeline-item">
+          <div class="timeline-time">07:15</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">上野出门 → JR 东京站丸之内南口</div>
+            <div class="desc">06:50 出门，山手线 2 站到东京站，¥170。预留 10 分钟找集合点</div>
+            <div class="cost">¥170（约 ¥7 RMB）</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">08:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">集合上车 · KLOOK 富士山 G 线一日团</div>
+            <div class="desc">网红罗森+日川时计中文小团，含全程大巴+司导讲解，约 ¥200 RMB / 人</div>
+            <div class="cost">¥200 RMB（淘宝下单）</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">10:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">下吉田宝藏小镇（60 分钟）</div>
+            <div class="desc">忠灵塔 / 新仓山浅间公园所在地，398 级台阶上去，五重塔+富士山经典机位</div>
+            <div class="photo-row">
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E6%96%B0%E5%80%89%E5%B1%B1%20%E5%BF%A0%E7%81%B5%E5%A1%94%20%E5%AF%8C%E5%A3%AB%E5%B1%B1" target="_blank" rel="noopener"><span class="xhs-icon">书</span>忠灵塔+富士山<span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">11:45</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">天梯小镇 · 日川时计店（20 分钟）</div>
+            <div class="desc">复古钟表小店，蒸汽朋克氛围出片点</div>
+            <div class="photo-row">
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E6%97%A5%E5%B7%9D%E6%97%B6%E8%AE%A1%20%E5%AF%8C%E5%A3%AB%E5%B1%B1" target="_blank" rel="noopener"><span class="xhs-icon">书</span>日川时计店<span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">12:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">忍野八海"小九寨"（80 分钟）</div>
+            <div class="desc">富士山下八个清澈泉池，含午餐时间。推荐当地烤鱼/草饼/手打荞麦面</div>
+            <div class="cost">午餐自理 ¥1,500（约 ¥65 RMB）</div>
+            <div class="photo-row">
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E5%BF%8D%E9%87%8E%E5%85%AB%E6%B5%B7" target="_blank" rel="noopener"><span class="xhs-icon">书</span>忍野八海<span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">14:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">网红罗森便利店（20 分钟）</div>
+            <div class="desc">河口湖前最火打卡点，蓝顶罗森 + 富士山招牌机位，必拍</div>
+            <div class="cost">买饮料零食 ¥500（约 ¥22 RMB）</div>
+            <div class="photo-row">
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E6%B2%B3%E5%8F%A3%E6%B9%96%20%E7%BD%97%E6%A3%AE%20%E5%AF%8C%E5%A3%AB%E5%B1%B1" target="_blank" rel="noopener"><span class="xhs-icon">书</span>河口湖罗森<span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">15:20</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">河口湖大石公园（50 分钟）</div>
+            <div class="desc">湖畔花海+水中富士山倒影，6 月薰衣草尾巴 / 紫阳花季开始</div>
+            <div class="photo-row">
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E6%B2%B3%E5%8F%A3%E6%B9%96%20%E5%A4%A7%E7%9F%B3%E5%85%AC%E5%9B%AD" target="_blank" rel="noopener"><span class="xhs-icon">书</span>大石公园<span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">16:20</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">启程返回东京</div>
+            <div class="desc">车上小睡补眠，约 2.5 小时</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">18:50</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">抵达东京站散团 → 回酒店</div>
+            <div class="desc">JR 山手线 2 站回上野，¥170</div>
+            <div class="cost">¥170（约 ¥7 RMB）</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">19:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">晚餐 · 上野阿美横丁</div>
+            <div class="desc">从酒店步行可达，居酒屋密集，烧肉/海鲜丼任选</div>
+            <div class="cost">¥3,500（约 ¥152 RMB）</div>
+          </div>
+        </div>
+        <div class="day-summary">
+          <span>🗻 当日节奏：跟团省心一日，6 月梅雨季祈祷晴天</span>
+          <span>当日花费 <strong>约 ¥5,840 JPY + ¥200 团费 ≈ ¥454 RMB</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 4 -->
+    <div class="day-card">
+      <div class="day-head pink">
+        <div class="day-num">DAY<strong>04</strong></div>
+        <div class="day-theme">
+          <div class="date">6.14 周六</div>
+          <div class="theme">镰仓 · 江之岛 + 东京塔夜景</div>
+        </div>
+      </div>
+      <div class="weather-bar">
+        <span class="icon">🌤️</span>
+        <span class="item"><span class="label">白天</span><span class="val">多云</span></span>
+        <span class="item"><span class="label">海边气温</span><span class="val">20-25℃</span></span>
+        <span class="item"><span class="label">降水</span><span class="val">30%</span></span>
+        <span class="tag">气候预估</span>
+        <div class="tip">🌊 海边一日，紫外线很强！太阳镜+防晒霜+帽子。镰仓高校前道口拍照机位日照直射，建议上午 10-11 点光最美。</div>
+      </div>
+      <div class="day-body">
+        <div class="timeline-item">
+          <div class="timeline-time">08:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">上野 → 镰仓（JR 横须贺线）</div>
+            <div class="desc">约 1 小时直达，单程 ¥940</div>
+            <div class="cost">往返 ¥1,880（约 ¥82 RMB）</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">09:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">江之电一日券</div>
+            <div class="desc">¥800，串联镰仓-长谷-江之岛全线，不限次数</div>
+            <div class="cost">¥800（约 ¥35 RMB）</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">10:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">高德院镰仓大佛</div>
+            <div class="desc">长谷站下，门票 ¥300</div>
+            <div class="cost">¥300（约 ¥13 RMB）</div>
+            <div class="photo-row">
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E9%95%B0%E4%BB%93%E5%A4%A7%E4%BD%9B" target="_blank" rel="noopener"><span class="xhs-icon">书</span>镰仓大佛<span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">11:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">镰仓高校前道口（灌篮高手机位）</div>
+            <div class="desc">必拍打卡点，江之电小火车+海+道口的经典构图</div>
+            <div class="photo-row">
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E9%95%B0%E4%BB%93%E9%AB%98%E6%A0%A1%E5%89%8D%20%E7%81%8C%E7%AF%AE%E9%AB%98%E6%89%8B" target="_blank" rel="noopener"><span class="xhs-icon">书</span>灌篮高手道口<span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">12:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">午餐 · 江之岛海鲜丼</div>
+            <div class="desc">推荐「とびっちょ」，生鱼片堆成山，¥2,200 一碗</div>
+            <div class="cost">¥2,200（约 ¥96 RMB）</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">14:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">江之岛展望台 + 神社</div>
+            <div class="desc">展望塔 ¥500，海景一线</div>
+            <div class="cost">¥500（约 ¥22 RMB）</div>
+            <div class="photo-row">
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E6%B1%9F%E4%B9%8B%E5%B2%9B%20%E5%B1%95%E6%9C%9B%E5%A1%94" target="_blank" rel="noopener"><span class="xhs-icon">书</span>江之岛展望塔<span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">17:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">回东京 → 麻布台之丘</div>
+            <div class="desc">约 1.5 小时到大门站/赤羽桥，看东京塔最佳机位</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">19:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">东京塔 · 麻布台之丘观景</div>
+            <div class="desc">不上塔，在麻布台之丘花园广场远看塔身亮灯（免费），出片巨好</div>
+            <div class="photo-row">
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E4%B8%9C%E4%BA%AC%E5%A1%94%20%E5%A4%9C%E6%99%AF" target="_blank" rel="noopener"><span class="xhs-icon">书</span>东京塔夜景<span class="arrow">↗</span></a>
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E9%BA%BB%E5%B8%83%E5%8F%B0%E4%B9%8B%E4%B8%98%20%E4%B8%9C%E4%BA%AC%E5%A1%94" target="_blank" rel="noopener"><span class="xhs-icon">书</span>麻布台之丘<span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">20:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">晚餐 · 麻布台之丘餐厅</div>
+            <div class="desc">商场内日料/拉面/西餐选择多</div>
+            <div class="cost">¥3,500（约 ¥152 RMB）</div>
+          </div>
+        </div>
+        <div class="day-summary">
+          <span>🌊 当日节奏：海边一日 + 夜景</span>
+          <span>当日花费 <strong>约 ¥9,180（≈¥399 RMB）</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 5 -->
+    <div class="day-card">
+      <div class="day-head">
+        <div class="day-num">DAY<strong>05</strong></div>
+        <div class="day-theme">
+          <div class="date">6.15 周日</div>
+          <div class="theme">银座 · 筑地 · 台场</div>
+        </div>
+      </div>
+      <div class="weather-bar">
+        <span class="icon">🌧️</span>
+        <span class="item"><span class="label">白天</span><span class="val">多云转雨</span></span>
+        <span class="item"><span class="label">气温</span><span class="val">21-27℃</span></span>
+        <span class="item"><span class="label">降水</span><span class="val">55%</span></span>
+        <span class="tag">气候预估</span>
+        <div class="tip">☂️ 6 月梅雨季高峰，预计有雨。好在银座主要在地下街+商场，台场也有 DiverCity 室内动线，雨天反而舒服。台场海边日落如下雨，可在 AquaCity 商场室内观景台看彩虹桥。</div>
+      </div>
+      <div class="day-body">
+        <div class="timeline-item">
+          <div class="timeline-time">08:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">筑地场外市场早餐</div>
+            <div class="desc">从浅草坐银座线一站可达，吃刺身丼+玉子烧+海鲜串</div>
+            <div class="cost">¥2,500（约 ¥109 RMB）</div>
+            <div class="photo-row">
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E7%AD%91%E5%9C%B0%E5%B8%82%E5%9C%BA%20%E6%97%A9%E9%A4%90" target="_blank" rel="noopener"><span class="xhs-icon">书</span>筑地市场早餐<span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">11:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">银座购物街</div>
+            <div class="desc">和光、三越、GINZA SIX、Uniqlo 旗舰店、无印良品旗舰店，逛 3 小时</div>
+            <div class="cost">购物预留 ¥10,000（约 ¥435 RMB）</div>
+            <div class="photo-row">
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E9%93%B6%E5%BA%A7%20%E8%A1%97%E6%99%AF" target="_blank" rel="noopener"><span class="xhs-icon">书</span>银座街景<span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">13:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">午餐 · 银座 Loft 楼上「煉瓦亭」</div>
+            <div class="desc">百年蛋包饭老店，¥2,000 左右</div>
+            <div class="cost">¥2,000（约 ¥87 RMB）</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">15:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">台场海滨公园 + 高达像</div>
+            <div class="desc">银座 → 新桥 → 百合海鸥号 → 台场，单轨电车海景</div>
+            <div class="cost">交通 ¥640（约 ¥28 RMB）</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">17:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">DiverCity 商场 + 海边日落</div>
+            <div class="desc">看自由女神像+彩虹桥日落，超治愈</div>
+            <div class="photo-row">
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E5%8F%B0%E5%9C%BA%20%E5%BD%A9%E8%99%B9%E6%A1%A5%20%E6%97%A5%E8%90%BD" target="_blank" rel="noopener"><span class="xhs-icon">书</span>台场彩虹桥<span class="arrow">↗</span></a>
+              <a class="xhs-link" href="https://www.xiaohongshu.com/search_result?keyword=%E5%8F%B0%E5%9C%BA%20%E9%AB%98%E8%BE%BE" target="_blank" rel="noopener"><span class="xhs-icon">书</span>台场高达<span class="arrow">↗</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">19:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">晚餐 · 蟹道乐（银座本店）</div>
+            <div class="desc">想吃蟹的最后一晚，套餐 ¥5,000 起</div>
+            <div class="cost">¥5,000（约 ¥217 RMB）</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">21:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">回酒店收拾行李 · 早睡</div>
+            <div class="desc">明早 5:30 出门，今晚别贪杯</div>
+          </div>
+        </div>
+        <div class="day-summary">
+          <span>🛍 当日节奏：购物 + 海滨</span>
+          <span>当日花费 <strong>约 ¥20,140（≈¥876 RMB，含购物）</strong></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 6 -->
+    <div class="day-card">
+      <div class="day-head pink">
+        <div class="day-num">DAY<strong>06</strong></div>
+        <div class="day-theme">
+          <div class="date">6.16 周一</div>
+          <div class="theme">早班机 · 告别东京</div>
+        </div>
+      </div>
+      <div class="weather-bar">
+        <span class="icon">🌥️</span>
+        <span class="item"><span class="label">清晨</span><span class="val">多云</span></span>
+        <span class="item"><span class="label">气温</span><span class="val">19-25℃</span></span>
+        <span class="item"><span class="label">降水</span><span class="val">35%</span></span>
+        <span class="tag">气候预估</span>
+        <div class="tip">✈ 早晨 5:30 出门去日暮里，气温 19-21℃ 偏凉，穿长袖。Skyliner 站台风大，行李用防雨罩。</div>
+      </div>
+      <div class="day-body">
+        <div class="timeline-item">
+          <div class="timeline-time">05:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">退房 · 出发去日暮里</div>
+            <div class="desc">提前一晚和酒店打招呼早 check-out</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">06:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">日暮里 → 成田 Skyliner</div>
+            <div class="desc">06:00 首班车，41 分钟到 NRT，单程 ¥2,580</div>
+            <div class="cost">¥2,580（约 ¥112 RMB）</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">06:45</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">成田机场办登机 + 退税</div>
+            <div class="desc">日上免税店转一圈，便利店买御饭团当早餐</div>
+            <div class="cost">¥600（约 ¥26 RMB）</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">09:30</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="title">起飞 · さようなら 东京</div>
+            <div class="desc">期待下次再见 🌸</div>
+          </div>
+        </div>
+        <div class="day-summary">
+          <span>✈ 当日节奏：返程</span>
+          <span>当日花费 <strong>约 ¥3,180（≈¥138 RMB）</strong></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 四、预算总览 -->
+  <div class="section">
+    <div class="section-title">
+      <span class="num">肆</span>
+      <h2>预算总览 · 单人消费</h2>
+      <span class="deco"></span>
+    </div>
+
+    <table class="budget-table">
+      <thead>
+        <tr>
+          <th>类别</th>
+          <th>说明</th>
+          <th>JPY</th>
+          <th>RMB</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cat">🏨 住宿</td>
+          <td>上野/浅草 5 晚（双床房均摊）</td>
+          <td>¥27,500</td>
+          <td>¥1,196</td>
+        </tr>
+        <tr>
+          <td class="cat">🚆 交通</td>
+          <td>Skyliner 往返 + 地铁 + JR 镰仓往返 + D3 通勤</td>
+          <td>¥7,420</td>
+          <td>¥323</td>
+        </tr>
+        <tr>
+          <td class="cat">🚌 富士山团</td>
+          <td>KLOOK G 线一日团（含车+司导，淘宝下单）</td>
+          <td>—</td>
+          <td>¥200</td>
+        </tr>
+        <tr>
+          <td class="cat">🍣 餐饮</td>
+          <td>6 天 5 晚（早 ¥800 + 午 ¥1,800 + 晚 ¥3,800）</td>
+          <td>¥37,000</td>
+          <td>¥1,609</td>
+        </tr>
+        <tr>
+          <td class="cat">🎫 门票</td>
+          <td>SHIBUYA SKY + 根津美术馆 + 镰仓大佛 + 江之岛展望塔</td>
+          <td>¥4,800</td>
+          <td>¥209</td>
+        </tr>
+        <tr>
+          <td class="cat">🛍 购物</td>
+          <td>药妆 / 服饰 / 礼品（预留）</td>
+          <td>¥15,000</td>
+          <td>¥652</td>
+        </tr>
+        <tr>
+          <td class="cat">💼 杂项</td>
+          <td>eSIM / 退税手续 / 应急</td>
+          <td>¥5,000</td>
+          <td>¥217</td>
+        </tr>
+        <tr class="total-row">
+          <td colspan="2">合计（不含机票）</td>
+          <td>¥96,720 + ¥200 RMB</td>
+          <td>¥4,406</td>
+        </tr>
+        <tr>
+          <td class="cat">✈ 机票</td>
+          <td>香港 ⇌ 东京往返（已出票）</td>
+          <td>—</td>
+          <td>¥2,200</td>
+        </tr>
+        <tr class="total-row">
+          <td colspan="2"><strong>含机票总预算</strong></td>
+          <td>—</td>
+          <td><strong>¥6,606</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 五、票券 Checklist -->
+  <div class="ticket-section">
+    <div class="section-title">
+      <span class="num">伍</span>
+      <h2>出行 Checklist · 可勾选</h2>
+      <span class="deco"></span>
+    </div>
+
+    <!-- 进度条 -->
+    <div class="progress-bar">
+      <span class="label">🎯 准备进度</span>
+      <div class="bar"><div class="fill" id="progressFill"></div></div>
+      <span class="num" id="progressNum">0 / 0</span>
+    </div>
+
+    <!-- 分组 1：出发前预约（必抢） -->
+    <div class="checklist-group">
+      <div class="checklist-group-head">
+        <h3>🌸 出发前必预约</h3>
+        <span class="count">越早越好</span>
+      </div>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">SHIBUYA SKY 涩谷展望台（D2 17:30 场）</span>
+            <span class="check-price">¥109 RMB</span>
+          </div>
+          <div class="check-desc">
+            <span class="channel">官网</span>shibuya-scramble-square.com<br>
+            日落场最热门，建议至少提前 2 周抢，KLOOK / KKday 也可中文下单
+          </div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">KLOOK 富士山 G 线一日团（D3 6/13）</span>
+            <span class="check-price">¥200 RMB</span>
+          </div>
+          <div class="check-desc">
+            <span class="channel">淘宝</span>搜「KLOOK 富士山一日游 G 线」<br>
+            选 6/13 周五 · 东京站丸之内南口集合，下单后 24-48h 出确认单
+          </div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">蟹道乐 银座本店 晚餐（D5 6/15 晚）</span>
+            <span class="check-price">¥217 RMB</span>
+          </div>
+          <div class="check-desc">
+            <span class="channel">官网</span>douraku.co.jp（中文页面）<br>
+            周日晚高峰必约，可备选大众点评海外版或 KLOOK 套餐
+          </div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">根津美术馆 入场票（D2 14:00）</span>
+            <span class="check-price">¥65-78 RMB</span>
+          </div>
+          <div class="check-desc">
+            <span class="channel">官网</span>nezu-muse.or.jp<br>
+            常设展现场买亦可，特别展建议官网预约免排队 · 周四开馆 ✅
+          </div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">连住 5 晚酒店（上野 / 浅草）</span>
+            <span class="check-price">¥1,196 RMB</span>
+          </div>
+          <div class="check-desc">
+            <span class="channel">推荐</span>Booking / Agoda / KLOOK 三平台比价<br>
+            首选东京里士满 · 浅草微笑 Premium · APA 御徒町
+          </div>
+        </div>
+      </label>
+    </div>
+
+    <!-- 分组 2：出发前准备 -->
+    <div class="checklist-group">
+      <div class="checklist-group-head green">
+        <h3>🍃 出发前准备</h3>
+        <span class="count">起飞前 1-7 天</span>
+      </div>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">护照有效期检查（≥ 6 个月）+ 日签</span>
+            <span class="check-price">必备</span>
+          </div>
+          <div class="check-desc">护照在 2026 年 12 月之后才过期才安全；日本三年多次签建议提前 4-6 周办</div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">机票电子行程单 · 打印 / 截图</span>
+            <span class="check-price">必备</span>
+          </div>
+          <div class="check-desc">出入境官员有时会要求查看回程票，存手机相册一份</div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">日本 eSIM（8 天 5GB）</span>
+            <span class="check-price">¥80-120 RMB</span>
+          </div>
+          <div class="check-desc">
+            <span class="channel">推荐</span>Saily / Ubigi / 中国移动国际版（淘宝下单）<br>
+            落地自动开通，无需取卡换卡
+          </div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">Apple Pay Suica 加卡 + 充值</span>
+            <span class="check-price">充 ¥130 起</span>
+          </div>
+          <div class="check-desc">
+            iPhone 钱包 → 添加交通卡 → 日本 Suica → Apple Pay 充值<br>
+            JR / 便利店 / 自动贩卖机刷手机即可
+          </div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">现金兑换 ¥30,000-50,000 日元</span>
+            <span class="check-price">¥1,300-2,170 RMB</span>
+          </div>
+          <div class="check-desc">
+            <span class="channel">渠道</span>香港找换店汇率最好<br>
+            居酒屋、神社小摊、河口湖小店常只收现金，必备
+          </div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">VISA / Mastercard 信用卡 1-2 张</span>
+            <span class="check-price">兜底</span>
+          </div>
+          <div class="check-desc">酒店押金、大额消费、退税抵扣，建议带能 Apple Pay 的港币卡</div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">下载常用 App</span>
+            <span class="check-price">免费</span>
+          </div>
+          <div class="check-desc">
+            Google Maps（必备）· Tabelog（吃饭）· 乘换案内 / Citymapper（地铁）· Papago / DeepL（翻译）· KLOOK · 大众点评海外版
+          </div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">境外旅游保险</span>
+            <span class="check-price">¥30-80 RMB</span>
+          </div>
+          <div class="check-desc">
+            <span class="channel">推荐</span>支付宝平安境外险 / 美亚白银计划<br>
+            日本医疗费贵，建议买 50 万以上医疗保额
+          </div>
+        </div>
+      </label>
+    </div>
+
+    <!-- 分组 3：行李物品 -->
+    <div class="checklist-group">
+      <div class="checklist-group-head beige">
+        <h3>🧳 行李物品 · 6 月梅雨季</h3>
+        <span class="count">出发前一晚收齐</span>
+      </div>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">折叠伞 · 防水风衣 / 雨披</span>
+            <span class="check-price">必带</span>
+          </div>
+          <div class="check-desc">6 月东京 40-60% 概率下雨，富士山+镰仓两天尤其要做好防雨</div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">防滑舒适运动鞋（最关键）</span>
+            <span class="check-price">必带</span>
+          </div>
+          <div class="check-desc">6 天日均 1.5-2 万步，浅草石板路 / 江之岛海边 / 忍野八海全靠它</div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">轻便外套 / 长袖（早晚温差）</span>
+            <span class="check-price">必带</span>
+          </div>
+          <div class="check-desc">6 月东京 18-26℃，富士山河口湖早晚 12-15℃ 偏凉</div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">充电宝（≤ 100Wh / 27000mAh）</span>
+            <span class="check-price">必带</span>
+          </div>
+          <div class="check-desc">必须随身携带，禁止托运。20000mAh 以下航司一般无限制</div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">日规电源转换器 / 多口插排</span>
+            <span class="check-price">¥30-50 RMB</span>
+          </div>
+          <div class="check-desc">
+            日本是 A 型两脚扁插（110V），iPhone/MacBook 自带的扁插能用<br>
+            如果你带港版三脚插的设备，必须带转换头
+          </div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">常备药 · 创可贴</span>
+            <span class="check-price">必带</span>
+          </div>
+          <div class="check-desc">感冒药 / 肠胃药 / 退烧药 / 晕车药（D3 富士山山路）/ 抗过敏</div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">防晒霜 · 太阳镜 · 帽子</span>
+            <span class="check-price">必带</span>
+          </div>
+          <div class="check-desc">6 月日本紫外线超强，富士山下海拔高更晒</div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">空行李袋 / 折叠购物袋</span>
+            <span class="check-price">建议带</span>
+          </div>
+          <div class="check-desc">银座一逛战利品爆仓，备一个折叠袋装回程</div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">洗漱包 · 隐形眼镜 / 护理液</span>
+            <span class="check-price">必带</span>
+          </div>
+          <div class="check-desc">日本酒店通常提供洗发水 / 沐浴露 / 牙刷，但护肤品要自带</div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">护照复印件 / 备份照片</span>
+            <span class="check-price">建议带</span>
+          </div>
+          <div class="check-desc">护照丢了能拿复印件先去使馆补办，存手机云盘一份照片</div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">小礼品（伴手礼用）</span>
+            <span class="check-price">可选</span>
+          </div>
+          <div class="check-desc">如有日本朋友 / 民宿房东，带点中式茶叶 / 文创小物当礼物</div>
+        </div>
+      </label>
+    </div>
+
+    <!-- 分组 4：落地后办 -->
+    <div class="checklist-group">
+      <div class="checklist-group-head coffee">
+        <h3>☕ 落地 / 现场办</h3>
+        <span class="count">D1 抵达后</span>
+      </div>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">入境填表（Visit Japan Web）</span>
+            <span class="check-price">免费</span>
+          </div>
+          <div class="check-desc">
+            <span class="channel">提前办</span>vjw-lp.digital.go.jp<br>
+            登记入境信息和海关申报，落地刷二维码免填纸质表，省 30 分钟
+          </div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">Skyliner + 地铁 72h 套票（成田机场）</span>
+            <span class="check-price">¥212 RMB</span>
+          </div>
+          <div class="check-desc">
+            <span class="channel">购买</span>京成柜台（T1 B1F / T2 B1F）出示护照<br>
+            如已用 Suica，可只买 Skyliner 单程 ¥2,580
+          </div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">江之电一日券（D4 镰仓站买）</span>
+            <span class="check-price">¥35 RMB</span>
+          </div>
+          <div class="check-desc">JR 镰仓站旁江之电窗口或自动售票机 · 当日无限次乘坐</div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">镰仓大佛 + 江之岛展望塔门票</span>
+            <span class="check-price">¥35 RMB</span>
+          </div>
+          <div class="check-desc">D4 现场窗口买，几乎不排队</div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">Skyliner 单程返成田（D6 早晨）</span>
+            <span class="check-price">¥112 RMB</span>
+          </div>
+          <div class="check-desc">日暮里站京成柜台 / 自动售票机 · 首班车 6:00</div>
+        </div>
+      </label>
+
+      <label class="check-item">
+        <input type="checkbox" class="check">
+        <div class="check-content">
+          <div class="check-row">
+            <span class="check-title">退税办理（出境前）</span>
+            <span class="check-price">最高 10%</span>
+          </div>
+          <div class="check-desc">同店满 ¥5,000（不含税）当场退，必须出示<strong>护照</strong>，化妆品/药妆封袋离境前不能拆</div>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <script>
+    // Checklist 进度统计
+    (function(){
+      const checks = document.querySelectorAll('.check');
+      const fill = document.getElementById('progressFill');
+      const num = document.getElementById('progressNum');
+      const STORAGE_KEY = 'tokyo-checklist-2026';
+
+      // 还原状态
+      try {
+        const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+        checks.forEach((c, i) => { if(saved[i]) c.checked = true; });
+      } catch(e){}
+
+      function update(){
+        const total = checks.length;
+        const done = Array.from(checks).filter(c => c.checked).length;
+        const pct = total ? (done/total*100) : 0;
+        fill.style.width = pct + '%';
+        num.textContent = done + ' / ' + total;
+        // 持久化
+        const state = {};
+        checks.forEach((c, i) => { if(c.checked) state[i] = 1; });
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch(e){}
+      }
+      checks.forEach(c => c.addEventListener('change', update));
+      update();
+    })();
+  </script>
+
+  <!-- 六、贴心提示 -->
+  <div class="tips-section">
+    <div class="section-title">
+      <span class="num">陆</span>
+      <h2>实用 Tips · 出发前必看</h2>
+      <span class="deco"></span>
+    </div>
+
+    <div class="tip-card">
+      <strong>① 关于天气：</strong>6 月是日本梅雨季，带<strong>折叠伞 + 防水鞋</strong>，富士山看到的概率约 60-70%，建议把富士山行程灵活放在 D3 或 D4，看天气预报哪天晴就哪天去。
+    </div>
+    <div class="tip-card">
+      <strong>② 关于签证：</strong>个人单次旅游签 5 月底前办妥，6 月初出行刚好。建议办 3 年多次（如有冲绳/东北旅行计划）。
+    </div>
+    <div class="tip-card">
+      <strong>③ 关于现金：</strong>东京 90% 商家支持 IC 卡 / 信用卡 / Apple Pay，建议<strong>带 30,000 日元现金</strong>足够（神社小店、居酒屋偶尔只收现金）。
+    </div>
+    <div class="tip-card">
+      <strong>④ 关于交通卡：</strong>Suica / Pasmo 用 Apple Pay 直接绑定虚拟卡，地铁/便利店/自动贩卖机一刷搞定，<strong>免去到处买票</strong>。
+    </div>
+    <div class="tip-card">
+      <strong>⑤ 关于网络：</strong>香港出发可买 eSIM（Ubigi / Saily / 8 天 5GB 约 ¥80 RMB），无需取还，落地自动开通。
+    </div>
+    <div class="tip-card">
+      <strong>⑥ 关于预约：</strong>SHIBUYA SKY、河口湖巴士、蟹道乐建议<strong>提前 3-7 天网上预约</strong>，周末很多店不接 walk-in。
+    </div>
+    <div class="tip-card">
+      <strong>⑦ 关于退税：</strong>同店满 ¥5,000（不含税）当场退税，必须带<strong>护照</strong>，化妆品/药妆封袋离境前不能拆。
+    </div>
+    <div class="tip-card">
+      <strong>⑧ 关于早班机：</strong>6.16 早 9:30 飞机，强烈建议<strong>把行李前一晚收拾好</strong>，5:00 起床不慌。日暮里站首班 Skyliner 是 5:58 或 6:00，赶得上。
+    </div>
+  </div>
+
+  <!-- 页脚 -->
+  <div class="footer">
+    <div class="quote">🌸 旅途愉快 · 平安抵达</div>
+    <div class="sig">T O K Y O · 2 0 2 6 . 0 6</div>
+  </div>
+
+</div>
+
+<script>
+  // ============================================
+  // 小红书链接智能跳转：优先唤起 App，失败 fallback 浏览器
+  // ============================================
+  (function(){
+    // 微信环境检测
+    function isWeixin(){
+      return /MicroMessenger/i.test(navigator.userAgent);
+    }
+    // iOS / Android 检测
+    function isMobile(){
+      return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    }
+
+    // 从 https 链接里提取关键词
+    function getKeyword(url){
+      const match = url.match(/keyword=([^&]+)/);
+      return match ? decodeURIComponent(match[1]) : '';
+    }
+
+    // 拦截所有小红书链接点击
+    document.addEventListener('click', function(e){
+      const link = e.target.closest('a.xhs-link');
+      if (!link) return;
+
+      const httpUrl = link.href;
+      // 微信内打不开 App，直接走 http（微信内置浏览器）
+      if (isWeixin()) return;
+      // 桌面端直接走 http
+      if (!isMobile()) return;
+
+      // 移动端非微信：尝试唤起 App
+      e.preventDefault();
+      const keyword = getKeyword(httpUrl);
+
+      // 小红书私有协议（搜索页）
+      const appUrl = 'xhsdiscover://search/result?keyword=' + encodeURIComponent(keyword);
+
+      // 记录跳转开始时间
+      const startTime = Date.now();
+      let timer = null;
+
+      // 监听页面 visibility 变化，判断是否成功跳到 App
+      function handleVisibility(){
+        if (document.hidden || document.visibilityState === 'hidden') {
+          // App 唤起成功，取消 fallback
+          clearTimeout(timer);
+          document.removeEventListener('visibilitychange', handleVisibility);
+        }
+      }
+      document.addEventListener('visibilitychange', handleVisibility);
+
+      // 尝试唤起 App
+      window.location.href = appUrl;
+
+      // 800ms 后如果还在当前页，说明 App 没装/没唤起，fallback 到浏览器
+      timer = setTimeout(function(){
+        document.removeEventListener('visibilitychange', handleVisibility);
+        if (Date.now() - startTime < 1500 && !document.hidden) {
+          // 真的没跳走，打开浏览器
+          window.location.href = httpUrl;
+        }
+      }, 800);
+    }, true);
+  })();
+</script>
+
+</body>
+</html>
